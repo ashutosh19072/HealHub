@@ -72,7 +72,7 @@ CREATE TABLE `pharmacy` (
 
 LOCK TABLES `pharmacy` WRITE;
 /*!40000 ALTER TABLE `pharmacy` DISABLE KEYS */;
-INSERT INTO `pharmacy` VALUES (1,1,'SunPharma Medicose','Ashutosh Tiwari','Rajesh Nagar indore','8223001989','Indore',NULL,NULL,'APPROVED','2026-04-26 10:18:27'),(2,1,'Indian Pharmacy Ltd','Ashutosh Tiwari','Hawa Bangla Indore','7879094518','Indore',NULL,NULL,'PENDING','2026-04-26 10:19:33');
+INSERT INTO `pharmacy` VALUES ();
 /*!40000 ALTER TABLE `pharmacy` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -103,7 +103,7 @@ CREATE TABLE `stock` (
 
 LOCK TABLES `stock` WRITE;
 /*!40000 ALTER TABLE `stock` DISABLE KEYS */;
-INSERT INTO `stock` VALUES (2,1,1,200,'2026-04-26 10:26:01'),(3,1,22,400,'2026-04-26 10:26:13'),(4,1,15,200,'2026-04-26 10:26:21');
+INSERT INTO `stock` VALUES ();
 /*!40000 ALTER TABLE `stock` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,7 +133,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Ashutosh Tiwari','ashutosh@gmail.com','2004','USER','active','2026-04-26 10:17:05'),(2,'Vivek Raghuwanshi','vivek@gmail.com','2000','USER','active','2026-04-26 10:28:14');
+INSERT INTO `users` VALUES ();
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
