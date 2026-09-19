@@ -379,7 +379,7 @@ public class UserDAO
                         {
 				protected PasswordAuthentication getPasswordAuthentication() 
                                 {
-					return new PasswordAuthentication("support.healhubltd@gmail.com", "szwxlbtjbglrjjww");// Put your email
+					return new PasswordAuthentication("support.healhubltd@gmail.com", "your_Email_Key");// Put your email
 				}
 			});
 			// compose message
