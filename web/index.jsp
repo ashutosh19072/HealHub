@@ -274,15 +274,15 @@
                     <ul class="space-y-3 text-sm">
                         <li class="flex items-center gap-2">
                             <i data-lucide="map-pin" class="h-4 w-4 text-teal-400"></i>
-                            <span>45-C Rajendra Nagar, Indore MP 452012</span>
+                            <span>Rajendra Nagar, Indore MP 452012</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i data-lucide="phone" class="h-4 w-4 text-teal-400"></i>
-                            <span>+91 8223001765</span>
+                            <span>+91 8223001***</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i data-lucide="mail" class="h-4 w-4 text-teal-400"></i>
-                            <span>support@healhub.com</span>
+                            <span>support.healhubltd@gmail.com</span>
                         </li>
                     </ul>
                 </div>

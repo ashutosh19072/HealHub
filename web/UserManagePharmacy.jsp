@@ -77,13 +77,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 transition">
+                        <a href="userDashboard.jsp" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 transition">
                             <i data-lucide="search" class="w-5 h-5"></i>
                             <span>Search Medicine</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 transition">
+                        <a href="userDashboard.jsp" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 transition">
                             <i data-lucide="map-pin" class="w-5 h-5"></i>
                             <span>Nearby Pharmacies</span>
                         </a>
@@ -124,14 +124,16 @@
             <!-- Top Navbar -->
             <header class="bg-white shadow-sm border-b border-gray-200">
                 <div class="flex items-center justify-between px-8 py-4">
-                    <div class="flex items-center space-x-6">
+                    <div class="flex items-center space-x-6" style="width: 850px">
                         
-                        <nav class="hidden md:flex items-center space-x-6">
-                            <a href="userDashboard.jsp" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Dashboard</a>
-                            <a href="#" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Search Medicine</a>
-                            <a href="registerPharmacy.jsp" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Register Pharmacy</a>
-                            <a href="UserManagePharmacy.jsp" class="text-sm font-medium text-blue-600">My Pharmacy</a>
-                        </nav>
+                        <marquee behavior="scroll" direction="left" scrollamount="5" class="text-yellow-800 text-sm font-medium">
+
+                        ⚠️ Disclaimer: HealHub is intended for informational purposes only. 
+                        Medicine availability and pharmacy information may change in real time. 
+                        Please verify details directly with the pharmacy before making healthcare-related decisions. 
+                        HealHub does not provide medical advice or guarantee medicine availability.
+
+                        </marquee>
                     </div>
                     
                     <div class="flex items-center space-x-4">

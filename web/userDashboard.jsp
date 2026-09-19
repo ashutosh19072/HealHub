@@ -29,7 +29,7 @@
     
     <style>
         html{
-            scroll-behavior: smooth;
+            scroll-behaviour: smooth;
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -52,6 +52,8 @@
             String name = u.getUsername();
             
             session.setAttribute("userData", u);
+            
+            List<SearchResult> list = (List<SearchResult>)request.getAttribute("results");
             
      %>
     
@@ -130,14 +132,16 @@
             <!-- Top Navbar -->
             <header class="bg-white shadow-sm border-b border-gray-200">
                 <div class="flex items-center justify-between px-8 py-4">
-                    <div class="flex items-center space-x-6">
+                    <div class="flex items-center space-x-6" style="width: 850px">
                         
-                        <nav class="hidden md:flex items-center space-x-6">
-                            <a href="userDashboard.jsp" class="text-sm font-medium text-blue-600">Dashboard</a>
-                            <a href="#search" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Search Medicine</a>
-                            <a href="registerPharmacy.jsp" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Register Pharmacy</a>
-                            <a href="UserManagePharmacy.jsp" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">My Pharmacy</a>
-                        </nav>
+                        <marquee behavior="scroll" direction="left" scrollamount="5" class="text-yellow-800 text-sm font-medium">
+
+                        ⚠️ Disclaimer: HealHub is intended for informational purposes only. 
+                        Medicine availability and pharmacy information may change in real time. 
+                        Please verify details directly with the pharmacy before making healthcare-related decisions. 
+                        HealHub does not provide medical advice or guarantee medicine availability.
+
+                        </marquee>
                     </div>
                     
                     <div class="flex items-center space-x-4">
@@ -208,7 +212,18 @@
                 </form>
                 
 
-                
+                <% 
+                    if(list==null)
+                    {
+                        %>
+                        <div class="bg-white p-6 rounded-lg shadow text-center">
+                            <p class="text-gray-600">Click "Nearby Pharmacies" to Locate Nearby Pharmacies</p>
+                        </div><br>
+                <%
+                    }
+                    else
+                    {   
+                %>
                 <!-- Search Results Section -->
                 <div class="mb-8">
                     <h2 class="text-xl font-bold text-gray-800 mb-4">Search Results</h2>
@@ -236,7 +251,7 @@
                                 <%      
                                         
                                         
-                                        List<SearchResult> list = (List<SearchResult>)request.getAttribute("results");
+                                        
                                         
                                         if(list!=null && !list.isEmpty())
                                         {
@@ -314,6 +329,8 @@
                         </div>
                     </div>
                 </div>
+                <% } %>
+                
                 
                 <!-- Nearby Pharmacies Section -->
                 
@@ -382,7 +399,7 @@
                         <% } else { %>
 
                         <div class="bg-white p-6 rounded-lg shadow text-center">
-                            <p class="text-gray-600">Click "Nearby Pharmacies" to load results.</p>
+                            <p class="text-gray-600">No Nearby Pharmacies Found</p>
                         </div>
 
     <% } %>

@@ -70,13 +70,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 transition">
+                        <a href="userDashboard.jsp" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 transition">
                             <i data-lucide="search" class="w-5 h-5"></i>
                             <span>Search Medicine</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 transition">
+                        <a href="userDashboard.jsp" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 transition">
                             <i data-lucide="map-pin" class="w-5 h-5"></i>
                             <span>Nearby Pharmacies</span>
                         </a>
@@ -117,14 +117,16 @@
             <!-- Top Navbar -->
             <header class="bg-white shadow-sm border-b border-gray-200">
                 <div class="flex items-center justify-between px-8 py-4">
-                    <div class="flex items-center space-x-6">
+                    <div class="flex items-center space-x-6" style="width: 850px">
                         
-                        <nav class="hidden md:flex items-center space-x-6">
-                            <a href="userDashboard.jsp" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Dashboard</a>
-                            <a href="#" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">Search Medicine</a>
-                            <a href="registerPharmacy.jsp" class="text-sm font-medium text-blue-600">Register Pharmacy</a>
-                            <a href="UserManagePharmacy.jsp" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition">My Pharmacy</a>
-                        </nav>
+                        <marquee behavior="scroll" direction="left" scrollamount="5" class="text-yellow-800 text-sm font-medium">
+
+                        ⚠️ Disclaimer: HealHub is intended for informational purposes only. 
+                        Medicine availability and pharmacy information may change in real time. 
+                        Please verify details directly with the pharmacy before making healthcare-related decisions. 
+                        HealHub does not provide medical advice or guarantee medicine availability.
+
+                        </marquee>
                     </div>
                     
                     <div class="flex items-center space-x-4">
@@ -191,9 +193,44 @@
                 <div class="flex items-center">
                     <input id="terms" name="terms" type="checkbox" required class="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded">
                     <label for="terms" class="ml-2 block text-sm text-gray-900">
-                        I agree to the <a href="#" class="text-teal-600 hover:text-teal-500">Terms and Conditions</a>
+                        I agree to the <a href="javascript:void(0)" onclick="openPopup()" class="text-teal-600 hover:text-teal-500">Terms and Conditions</a>
                     </label>
                 </div>
+                    
+                     <!-- Popup -->
+<div id="termsPopup"
+     class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+
+    <div class="bg-white w-[90%] max-w-lg rounded-xl p-6 relative shadow-lg">
+
+        <!-- Close Button -->
+        <span onclick="closePopup()"
+              class="absolute top-2 right-4 text-3xl cursor-pointer text-red-500">
+            &times;
+        </span>
+
+        <h2 class="text-2xl font-bold text-teal-600 mb-4">
+            Terms and Conditions
+        </h2>
+
+        <div class="text-gray-700 text-sm space-y-3">
+
+            <p>
+                Welcome to HealHub. By using this platform, you agree to follow our terms and conditions.
+            </p>
+
+            <ul class="list-disc pl-5 space-y-2">
+                <li>The pharmacy owner must provide accurate and valid pharmacy details during registration.</li>
+                <li>The registered pharmacy location and contact details should be correct and updated.</li>
+                <li>HealHub only displays medicine availability information and is not responsible for incorrect stock details.</li>
+                <li>HealHub reserves the right to verify, approve, reject, or remove pharmacy registrations if false information is found.</li>
+            </ul>
+            <p style="font-size: smaller">&copy; 2026 HealHub. All rights reserved.</p>
+
+        </div>
+
+    </div>
+</div>
 
                 <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors shadow-lg shadow-teal-100">
                     <span class="absolute left-0 inset-y-0 flex items-center pl-3">
@@ -212,6 +249,26 @@
     <!-- Initialize Lucide Icons -->
     <script>
         lucide.createIcons();
+        
+        function openPopup()
+        {
+            document.getElementById("termsPopup").classList.remove("hidden");
+        }
+
+        function closePopup()
+        {
+            document.getElementById("termsPopup").classList.add("hidden");
+        }
+
+        window.onclick = function(event)
+        {
+            let popup = document.getElementById("termsPopup");
+
+            if(event.target === popup)
+            {
+                popup.classList.add("hidden");
+            }
+        };
     </script>
     
     <!-- Google Maps API -->

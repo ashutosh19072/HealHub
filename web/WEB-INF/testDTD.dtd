@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT aliens (alien)>
+<!ELEMENT alien (name,salary)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT salarym (#PCDATA)>
+<!ATTLIST alien aid ID #REQUIRED>
+<!ATTLIST alien lang (C|Java|Python) "Java" #REQUIRED>
+

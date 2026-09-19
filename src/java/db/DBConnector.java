@@ -19,7 +19,7 @@ public class DBConnector {
             Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Driver loaded");
             
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/healhub","YOUR_DB_USERNAME","YOUR_DB_PASSWORD");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/healhub","root","root");
             
             System.out.println("Connected");
             

@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.User;
 
-
 public class LoginServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
@@ -24,6 +23,7 @@ public class LoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         
+       
         if(email!=null && password!=null && email.equalsIgnoreCase("admin@gmail.com") && password.equals("admin"))
         {   
             HttpSession session = request.getSession(true);
@@ -46,8 +46,9 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("userDashboard.jsp");
             }
             else
-            {
-                response.sendRedirect("login.jsp?error=invalid");
+            {   HttpSession session = request.getSession(true);
+                session.setAttribute("error","invalidlogin");
+                response.sendRedirect("login.jsp");
             } 
         }
         

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE aliens SYSTEM "testDTD.dtd" >
+
+<aliens>
+    <alien aid="A1" lang="">
+        <name>Ashu</name>
+        <salary>10000</salary>
+    </alien>
+    <alien aid="A2" lang="">
+        <name>Kratika</name>
+        <salary>12000</salary>
+    </alien>
+</aliens>
+

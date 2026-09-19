@@ -25,16 +25,13 @@ public class ForgetPasswordServlet extends HttpServlet {
 		
 		String email = request.getParameter("email");
 		
-		int otpvalue = 0;
-                
-		
-                
                 boolean isEmailExists = UserDAO.isEmailExists(email);
 		
 		if(email!=null || !email.equals("")) {
 			// sending otp
-			Random rand = new Random();
-			otpvalue = rand.nextInt(1255650);
+			 Random random = new Random();
+
+                        int otpvalue = 100000 + random.nextInt(900000);
 
 			String to = email;
                         
@@ -47,7 +44,7 @@ public class ForgetPasswordServlet extends HttpServlet {
                         
 			Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("YOUR_EMAIL", "YOUR_APP_PASSWORD");// Put your email
+					return new PasswordAuthentication("support.healhubltd@gmail.com", "szwxlbtjbglrjjww");// Put your email
 																									// id and
 																									// password here
 				}

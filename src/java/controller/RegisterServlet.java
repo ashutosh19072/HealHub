@@ -57,6 +57,7 @@ public class RegisterServlet extends HttpServlet
         {
                 HttpSession session = request.getSession(true);
                 session.setAttribute("email",email);
+                UserDAO.sendMail(email,username);
                 response.sendRedirect("userDashboard.jsp");
         }
         else
